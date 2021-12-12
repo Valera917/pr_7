@@ -11,10 +11,11 @@ if(isset($_FILES['photo'])){
 	
 			if($file_size <= 2097152){
 				$file_name_new = $file_name;
-				$file_destination = 'public/img/' . $file_name_new;
+				$file_destination = 'public/images/' . $file_name_new;
 				
 				if(move_uploaded_file($file_tmp, $file_destination));
-			}	
+			}
+		
 }
 
 ?>

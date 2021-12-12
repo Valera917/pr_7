@@ -20,8 +20,8 @@
         $gender = @$_POST["gender"];
 		if(isset($_FILES['photo'])){
 		$file = $_FILES['photo'];
+		$path = $file['name'];
 		}
-        $path = @$_POST["photo"];
 		
 		
 
@@ -56,9 +56,9 @@
         echo "User Added: " . $_POST["name"] . "<br>";
         echo "Email: " . $_POST["email"]. "<br>";
         echo "Gender: " . @$_POST["gender"] . "<br>";
-        echo "Image name: " . basename($_FILES["photo"]["name"]);
+		
+		addData();
     }
-    addData();
    
    ?> 
    <hr>

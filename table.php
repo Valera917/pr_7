@@ -6,15 +6,17 @@ $data = file_get_contents('database/users.csv');
 
 $user[] = explode(" ",$data);
 
-//explode(",",$user[0][$i])[1],
+
  for($i = 0; $i < count($user[0]); $i++) {
-    $users[] = [
-        'name' => isset(explode(",",$user[0][$i])[0])?explode(",",$user[0][$i])[0]:"Valera",
-        'email' => isset(explode(",",$user[0][$i])[1])?explode(",",$user[0][$i])[1]:"Error",
-        'gender' => isset(explode(",",$user[0][$i])[2])?explode(",",$user[0][$i])[2]:"Строка",
-        'path'=> !empty(explode(",",$user[0][$i])[3])?"public/img/" . explode(",",$user[0][$i])[3]:'public/img/test.jpg'
+      $users[] = [
+	'name' => explode(",",$user[0][$i])[0],
+	'email' => explode(",",$user[0][$i])[1],
+	'gender' => explode(",",$user[0][$i])[2],
+	'path'=> !empty(explode(",",$user[0][$i])[3])?"public/images/" . explode(",",$user[0][$i])[3]:'public/images/test.jpg'
 ];
     }
+
+
 	fclose($fp);
 ?>
 
