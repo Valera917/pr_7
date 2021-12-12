@@ -1,0 +1,15 @@
+body{
+    padding-top: 3rem;
+}
+
+.container {
+    width: 400px;
+}
+
+.logout-btn{
+    background-color: white;
+}
+
+.is-authorized-box{
+    text-align: center;
+}
